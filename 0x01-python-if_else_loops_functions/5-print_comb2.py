@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-for i in range(0,99):
-    print("{}{}".format(int(i/10), i%10), end=', ')
+for i in range(0, 99):
+    print("{}{}".format(int(i / 10), i % 10), end=', ')
 print("99")
