@@ -2,4 +2,4 @@
 string = 'abcdefghijklmnopqrstuvwxyz'
 
 for letter in string:
-    print(letter, end='')
+    print("{let}".format(let=letter), end='')
