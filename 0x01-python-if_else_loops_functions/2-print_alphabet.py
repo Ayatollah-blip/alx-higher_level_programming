@@ -1,5 +1,3 @@
 #!/usr/bin/python3
-string = "abcdefghijklmnopqrstuvwxyz"
-
-for letter in string:
-    print("{let}".format(let=letter), end='')
+for letter in range(97,123):
+    print("{:c}".format(letter), end='')
