@@ -2,4 +2,6 @@
 
 import add_0 as ADD
 
-print("{} + {} = {}".format(1, 2, ADD.add(1, 2)))
+a = 1
+b = 2
+print("{} + {} = {}".format(a, b, ADD.add(a, b)))
