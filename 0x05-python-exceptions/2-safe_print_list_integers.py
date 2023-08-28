@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 def(my_list=[], x=0):
     """Print the first x elements of a list that are integers.
 
