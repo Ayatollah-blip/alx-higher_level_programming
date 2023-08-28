@@ -1,4 +1,4 @@
-afe_print_list_integers(my_list=[], x=0):
+def(my_list=[], x=0):
     """Print the first x elements of a list that are integers.
 
     Args:
