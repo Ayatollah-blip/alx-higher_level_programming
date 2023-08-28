@@ -1,4 +1,6 @@
-afe_print_division(a, b):
+#!/usr/bin/python3
+
+def safe_print_division(a, b):
     quotient = 0
 
     try:
