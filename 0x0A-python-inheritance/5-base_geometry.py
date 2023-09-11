@@ -1,11 +1,7 @@
 #!/usr/bin/python3
-"""
-
-contains the BaseGeometry class
-
-"""
+""" An empty class"""
 
 
-class BaseGeometry():
-    """a subclass of list"""
+class BaseGeometry:
+    """ An empty class"""
     pass

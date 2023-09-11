@@ -1,1 +1,1 @@
-              This is inheritance task          
+Inheritance in python
