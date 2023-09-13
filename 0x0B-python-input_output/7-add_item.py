@@ -12,11 +12,13 @@ filename = 'add_item.json'
 args = len(sys.argv)
 
 if not os.path.isfile(filename):
+    """decccfefcfcfc """
     with open(filename, 'w', encoding='utf-8') as f:
         f.write('[]')
 
 if args > 1:
     data = load_from_json_file(filename)
+    """rccffcfcfc """
     for i in range(1, args):
         data.append(sys.argv[i])
     save_to_json_file(data, filename)
