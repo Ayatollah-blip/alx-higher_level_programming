@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """ the is the base classe  """
 
-class Base:
 
+class Base:
     """ clase base  """
     __nb_objects = 0
 
@@ -13,7 +13,7 @@ class Base:
             id:id of the instance
         """
         if id is not None:
-            self.id=id
+            self.id = id
         else:
-            Base.__nb_objects +=1
-            self.id=Base.__nb_objects
+            Base.__nb_objects += 1
+            self.id = Base.__nb_objects
