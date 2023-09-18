@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" First Rectangle  """
+"""A rectangle class"""
 from models.base import Base
 
 
@@ -18,10 +18,10 @@ class Rectangle(Base):
             ValueError: if x and y are under 0
         """
         super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
     @property
     def width(self):
@@ -30,6 +30,30 @@ class Rectangle(Base):
             The width value
         """
         return self.__width
+
+    @property
+    def height(self):
+        """The getter of the private attribute height
+        Returns:
+            The height value
+        """
+        return self.__height
+
+    @property
+    def x(self):
+        """ The getter of the private attribute x
+        Returns:
+            The x value
+        """
+        return self.__x
+
+    @property
+    def y(self):
+        """The getter of the private attribute y
+        Returns:
+            The y value
+        """
+        return self.__y
 
     @width.setter
     def width(self, width):
@@ -43,14 +67,6 @@ class Rectangle(Base):
             raise ValueError("width must be > 0")
         self.__width = width
 
-    @property
-    def height(self):
-        """The getter of the private attribute height
-        Returns:
-            The height value
-        """
-        return self.__width
-
     @height.setter
     def height(self, height):
         """The setter for the private attribute __height
@@ -63,14 +79,6 @@ class Rectangle(Base):
             raise ValueError("height must be > 0")
         self.__height = height
 
-    @property
-    def x(self):
-        """ The getter of the private attribute x
-        Returns:
-            The x value
-        """
-        return self.__x
-
     @x.setter
     def x(self, x):
         """The setter for the private attribute __x
@@ -82,14 +90,6 @@ class Rectangle(Base):
         if x < 0:
             raise ValueError("x must be > 0")
         self.__x = x
-
-    @property
-    def y(self):
-        """The getter of the private attribute y
-        Returns:
-            The y value
-        """
-        return self.__y
 
     @y.setter
     def y(self, y):
