@@ -1,0 +1,2 @@
+-- THIS EXERCICE FOR show tables --
+SHOW TABLES;
