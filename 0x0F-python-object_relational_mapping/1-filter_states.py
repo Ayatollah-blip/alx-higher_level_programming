@@ -29,7 +29,9 @@ if __name__ == '__main__':
     """
     db = makingConnection(argv[1], argv[2], argv[3])
     cur = db.cursor()
-    cur.execute("SELECT * from states WHERE name LIKE BINARY 'N%' ORDER BY states.id ASC")
+    cur.execute("SELECT * from states
+                WHERE name LIKE BINARY 'N%'
+                ORDER BY states.id ASC")
     row_select = cur.fetchall()
     for table in cur:
         print(table)
