@@ -22,7 +22,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    for instance in session.query(State).order_by(State.id).filter(State.name.contains('a')):
+    for instance in session.query(State).filter(State.name.contains('a')):
         if instance is None:
             break
         print(f"{instance.id}: {instance.name}")
