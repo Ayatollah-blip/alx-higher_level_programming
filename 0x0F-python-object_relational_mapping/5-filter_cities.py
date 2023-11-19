@@ -34,11 +34,11 @@ if __name__ == '__main__':
                 WHERE states.name=%(state)s ORDER BY cities.id ASC""",
                 {'state': argv[4]})
     row_select = cur.fetchall()
-    l = len(row_select)
-    if l != 0:
-        for i in range(l-1):
+    le = len(row_select)
+    if le != 0:
+        for i in range(le-1):
             print("{}, ".format(row_select[i][0]), end="")
-        print(row_select[l-1][0])
+        print(row_select[le-1][0])
     else:
         print()
     cur.close()
