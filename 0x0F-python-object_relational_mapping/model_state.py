@@ -14,13 +14,24 @@ Base = declarative_base()
 
 
 class State(Base):
+    """State class
 
+
+
+    Attributes:
+
+        __tablename__ (str): The table name of the class
+
+        id (int): The State id of the class
+
+        name (str): The State name of the class
+
+    """
     __tablename__ = 'states'
 
-    id = Column(Integer, Primary_key=True)
+    id = Column(Integer, primary_key=True)
     name = Column(String(128), nullable=False)
 
-    """def __init__(self, state_id, name):
-        self.state_id = state_id
+    def __init__(self, state_id, name):
+        self.id = state_id
         self.name=name
-    """
