@@ -14,16 +14,13 @@ from sqlalchemy.orm import sessionmaker
 if __name__ == "__main__":
 
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
-                           .format(sys.argv[1], sys.argv[2], sys.argv[3]),
-                           pool_pre_ping=True)
-
-    Base.metadata.create_all(engine)
+                           .format(sys.argv[1], sys.argv[2], sys.argv[3]))
 
     Session = sessionmaker(bind=engine)
     session = Session()
 
     RES = session.query(State).order_by(State.id).first()
     if RES is not None:
-        print(f"{RES.id} {RES.name}")
+        print(f"{RES.id}: {RES.name}")
     else:
         print("Nothing")
