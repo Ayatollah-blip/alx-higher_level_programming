@@ -29,7 +29,7 @@ if __name__ == '__main__':
     """
     db = makingConnection(argv[1], argv[2], argv[3])
     cur = db.cursor()
-    cur.execute("SELECT * from cities ORDER BY id ASC")
+    cur.execute("SELECT cities.id, cities.name, states.name from cities JOIN states WHERE cities.state_id=states.id ORDER BY id ASC")
     row_select = cur.fetchall()
     for table in cur:
         print(table)
