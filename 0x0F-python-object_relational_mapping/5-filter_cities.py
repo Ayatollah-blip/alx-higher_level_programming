@@ -39,6 +39,7 @@ if __name__ == '__main__':
         for i in range(l-1):
             print("{}, ".format(row_select[i][0]), end="")
         print(row_select[l-1][0])
-
+    else:
+        print()
     cur.close()
     db.close()
