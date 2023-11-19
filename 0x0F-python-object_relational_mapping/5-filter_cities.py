@@ -37,7 +37,7 @@ if __name__ == '__main__':
     l = len(row_select)
     if l != 0:
         for i in range(l-1):
-            print(row_select[i][0], end=", ")
+            print("{}, ".format(row_select[i][0]), end="")
         print(row_select[l-1][0])
 
     cur.close()
