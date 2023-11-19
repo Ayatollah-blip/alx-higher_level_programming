@@ -22,5 +22,8 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    for instance in session.query(State).filter(State.id == 1):
-        print(f"{instance.id}: {instance.name}")
+    RES = session.query(State).order_by(State.id).first()
+    if RES is not None:
+        print(f"{RES.id} {RES.name}")
+    else:
+        print("Nothing")
