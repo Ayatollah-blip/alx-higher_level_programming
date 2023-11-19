@@ -38,7 +38,7 @@ if __name__ == '__main__':
     if len(row_select) != 0:
         for i in range(len(row_select)-1):
             print(row_select[i][0], end=", ")
-        print(row_select[i+1][0])
+        print(row_select[len(row_select)-1][0])
 
     cur.close()
     db.close()
