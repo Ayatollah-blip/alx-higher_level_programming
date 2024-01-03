@@ -2,16 +2,16 @@
 
 const request = require('request');
 
-const filePath = process.argv;
+const filePath = process.argv[2];
 
 if (!filePath) {
   process.exit(1);
 }
 
-request.get(filePath[2], function (err, response, body) {
+request.get(filePath, (err, response, body) => {
   if (err) {
     console.error(err);
   } else {
-    console.log('code: ', response.statusCode);
+    console.log('code:', response.statusCode);
   }
 });
