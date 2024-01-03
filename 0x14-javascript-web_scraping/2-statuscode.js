@@ -8,7 +8,7 @@ if (!filePath) {
   process.exit(1);
 }
 
-request(filePath[2], function (err, response, body) {
+request.get(filePath[2], function (err, response, body) {
   if (err) {
     console.error(err);
   } else {
